@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "main.h": "c",
+        "appinterface.h": "c",
+        "appproc.h": "c",
+        "stderrorcode.h": "c",
+        "timercontrol.h": "c"
+    }
+}
