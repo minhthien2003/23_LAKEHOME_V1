@@ -38,22 +38,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
    if (htim->Instance == TIM6)
    {
+
     strBootPinHandle* pBootPin = GetBootPinAction();
       pBootPin->u8CheckCount++;
    }
+
+   
    else if(htim->Instance == TIM14)
    {
-    if (GetTimerCycleOneSecound() <=100)
+
+    u8TimerCycleOneSecond++;
+    if (GetTimerCycleOneSecound() >=100)
     {
-       u8TimerCycleOneSecond++;
+       ResetTimerCycleOneSecond();
     }
-    else 
-    {
-        // TimerAction(&htim14, TIMER_INTERRUPT, TIMER_STOP);
-        // TimerAction(&htim14, TIMER_INTERRUPT, TIMER_START);
-        ResetTimerCycleOneSecond();
-    }
-    
       
    }
 }

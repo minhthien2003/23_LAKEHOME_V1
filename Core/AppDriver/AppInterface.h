@@ -9,7 +9,7 @@
 #include "main.h"
 #include "AppProc.h"
 #include "StdErrorCode.h"
-#include "NRF24.h"
+//#include "NRF24.h"
 #include "TimerControl.h"
 #include "AppDataFlashOperation.h"
 

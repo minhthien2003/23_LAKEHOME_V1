@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --debug_file=$debugfile --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --debug_file=$debugfile --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
 }

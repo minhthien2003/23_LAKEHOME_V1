@@ -1447,16 +1447,10 @@
                         <name>$PROJ_DIR$\..\Core\AppDriver\AppInterface.h</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\Core\AppDriver\AppProc.c</name>
+                        <name>$PROJ_DIR$\..\Core\appdriver\AppProc.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\Core\AppDriver\AppProc.h</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\Core\AppDriver\NRF24.c</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\Core\AppDriver\NRF24.h</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\Core\AppDriver\StdErrorCode.c</name>
@@ -1531,12 +1525,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_spi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_spi_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_tim.c</name>

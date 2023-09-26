@@ -6,7 +6,9 @@
 #include "AppInterface.h"
 
 
-ErrorStd ErrorCode;
+ErrorStd ErrorCode = ENone;
+uint8_t AppLedCnt = 0; uint8_t u8CommCnt = 0;
+
 
 void SetErrorCode(ErrorStd eVal)
 {
@@ -19,9 +21,12 @@ ErrorStd GetErrorCode()
    return ErrorCode;
 }
 
+void ResetCommError()
+{
+   u8CommCnt = 0;
+}
 
 
-uint8_t AppLedCnt = 0; uint8_t u8CommCnt = 0;
 void AppCycleSetLedStatus()
 {
    sModelInfo* pModel = AppGetInfo();
@@ -31,6 +36,7 @@ void AppCycleSetLedStatus()
       {
       case ERROR_RS485_COMMUNICATE:
          ReInitUartConnect();
+         SetErrorCode(ENone);
          break;
       
       default:
@@ -62,7 +68,8 @@ void AppCycleSetLedStatus()
          u8CommCnt++;
          HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
       }
-      if (u8CommCnt >=5)
+      if ((u8CommCnt >=5) && (Get_0xFE_DataReceivedFromPanel() == DISABLE_READ_DATA_UART)\
+      && (pModel->TYPE == SLAVE))
       {
          ReInitUartConnect();
          u8CommCnt = 0;

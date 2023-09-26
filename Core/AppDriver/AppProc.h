@@ -17,6 +17,13 @@
 
 #define  MASTER_ADDRESS    0x00
 #define  SLAVE_ADDRESS     0x01
+
+/*Define Flag when Uart Received completed*/
+#define ALLOW_READ_DATA_UART     (1)
+#define DISABLE_READ_DATA_UART   (0)
+
+
+
 typedef enum
 {
    IO_GET_PIN_INPUT_VALUE = 0,   /*Read Input data*/
@@ -95,7 +102,7 @@ void ResetAllGPIOFunc();
 void ClearUartTxRxBuffer(Uart485DataCommPackets* pu8Packet);
 void UartSendData(const uint8_t* pu8Data, uint8_t u8NumData);
 
-uint8_t UartMakeSendData(const void* pu8Data, uint8_t u8NumData);
+void UartMakeSendData(const void* pu8Data, uint8_t u8NumData);
 void Uart485SendNotiACKPacket(uint8_t address, Uart485DataCommPackets* pData, uint8_t typeData,uint8_t u8NumData);
 
 void ReInitUartConnect();

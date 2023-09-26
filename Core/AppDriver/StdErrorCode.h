@@ -17,6 +17,7 @@ typedef enum{
 
 void SetErrorCode(ErrorStd eVal);
 ErrorStd GetErrorCode();
+void ResetCommError();
 
 void AppCycleSetLedStatus();
 
