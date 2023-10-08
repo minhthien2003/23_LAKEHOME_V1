@@ -288,7 +288,7 @@
         <option>
           <name>CCAllowList</name>
           <version>1</version>
-          <state>10010100</state>
+          <state>11111110</state>
         </option>
         <option>
           <name>CCDebugInfo</name>
@@ -369,16 +369,16 @@
         </option>
         <option>
           <name>CCOptLevel</name>
-          <state>2</state>
+          <state>3</state>
         </option>
         <option>
           <name>CCOptStrategy</name>
           <version>0</version>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCOptLevelSlave</name>
-          <state>2</state>
+          <state>3</state>
         </option>
         <option>
           <name>CCPosIndRopi</name>
@@ -427,7 +427,7 @@
         <option>
           <name>CCOptStrategySlave</name>
           <version>0</version>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCGuardCalls</name>
@@ -669,7 +669,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
-        <hasPrio>48</hasPrio>
+        <hasPrio>1</hasPrio>
         <buildSequence>inputOutputBased</buildSequence>
       </data>
     </settings>
@@ -1100,10 +1100,10 @@
             <name>$PROJ_DIR$\..\Core\AppDriver\AppDataFlashOperation.c</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\Core\appdriver\AppDataFlashOperation.h</name>
+            <name>$PROJ_DIR$\..\Core\AppDriver\AppDataFlashOperation.h</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\Core\appdriver\AppInterface.h</name>
+            <name>$PROJ_DIR$\..\Core\AppDriver\AppInterface.h</name>
           </file>
           <file>
             <name>$PROJ_DIR$\..\Core\appdriver\AppProc.c</name>
@@ -1115,13 +1115,13 @@
             <name>$PROJ_DIR$\..\Core\AppDriver\StdErrorCode.c</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\Core\appdriver\StdErrorCode.h</name>
+            <name>$PROJ_DIR$\..\Core\AppDriver\StdErrorCode.h</name>
           </file>
           <file>
             <name>$PROJ_DIR$\..\Core\AppDriver\TimerControl.c</name>
           </file>
           <file>
-            <name>$PROJ_DIR$\..\Core\appdriver\TimerControl.h</name>
+            <name>$PROJ_DIR$\..\Core\AppDriver\TimerControl.h</name>
           </file>
         </group>
         <file>

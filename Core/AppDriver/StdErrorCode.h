@@ -11,6 +11,7 @@ typedef enum{
    ENone = 0, 
    ERROR_RS485_COMMUNICATE,//error communicate rs485
    SET_MASTER_SLAVE,
+
 }ErrorStd;
 
 

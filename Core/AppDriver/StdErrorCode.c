@@ -57,7 +57,7 @@ void AppCycleSetLedStatus()
          AppLedCnt = GetTimerCycleOneSecound();
          HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
       }
-      
+
    }
 
    else if (pModel->TYPE == SLAVE)
@@ -68,10 +68,10 @@ void AppCycleSetLedStatus()
          u8CommCnt++;
          HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
       }
-      if ((u8CommCnt >=5) && (Get_0xFE_DataReceivedFromPanel() == DISABLE_READ_DATA_UART)\
+      if ((u8CommCnt >=3) && (Get_0xFE_DataReceivedFromPanel() == DISABLE_READ_DATA_UART)\
       && (pModel->TYPE == SLAVE))
       {
-         ReInitUartConnect();
+         //ReInitUartConnect();
          u8CommCnt = 0;
       }
       

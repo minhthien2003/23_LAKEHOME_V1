@@ -28,7 +28,7 @@
         <EnableCache>0</EnableCache>
     </ArmDriver>
     <DebugChecksum>
-        <Checksum>3361097072</Checksum>
+        <Checksum>2793170107</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -45,14 +45,18 @@
         <ShowArgs>0</ShowArgs>
     </CallStack>
     <JLinkDriver>
-        <jlinkResetStyle>12</jlinkResetStyle>
-        <jlinkResetStrategy>0</jlinkResetStrategy>
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <CStepIntDis>_ 0</CStepIntDis>
+        <jlinkResetStyle>12</jlinkResetStyle>
+        <jlinkResetStrategy>0</jlinkResetStrategy>
     </JLinkDriver>
     <watch_formats>
-        <Fmt0>{W}42:u32DeviceType	4	0</Fmt0>
-        <Fmt1>{W}42:u8TimerCycleOneSecond	3	0</Fmt1>
+        <Fmt0>{W}42:AppLedCnt	3	0</Fmt0>
+        <Fmt1>{W}42:ResetSystemCounter	3	0</Fmt1>
+        <Fmt2>{W}42:i	3	0</Fmt2>
+        <Fmt3>{W}42:u32DeviceType	4	0</Fmt3>
+        <Fmt4>{W}42:u8ResendCounter	3	0</Fmt4>
+        <Fmt5>{W}42:u8TimerCycleOneSecond	3	0</Fmt5>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>

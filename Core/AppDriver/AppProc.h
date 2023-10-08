@@ -58,6 +58,7 @@ typedef enum
    SET_ADDRESS_MODE,
    SET_MASTER,
    SET_SLAVE,
+   SYSTEM_REBOOT,
 
 } eBootPinMode;
 
@@ -100,7 +101,6 @@ void AppCycleGetInputDataPin();
 void ResetAllGPIOFunc();
 
 void ClearUartTxRxBuffer(Uart485DataCommPackets* pu8Packet);
-void UartSendData(const uint8_t* pu8Data, uint8_t u8NumData);
 
 void UartMakeSendData(const void* pu8Data, uint8_t u8NumData);
 void Uart485SendNotiACKPacket(uint8_t address, Uart485DataCommPackets* pData, uint8_t typeData,uint8_t u8NumData);

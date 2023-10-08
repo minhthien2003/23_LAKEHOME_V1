@@ -12,11 +12,26 @@ uint8_t u8TimerCycleOneSecond = 0;
 uint8_t u8LockTimer = TIMER_UNLOCK;
 uint8_t u8gTimeCallBackFunc = 0;
 
+/*  6048 = 7(day)*24(h)*3600(second)/100(counter)  */
+#define TIME_REBOOT_CONTER  (6048)
+
+uint16_t ResetSystemCounter = 0;
+
+void CheckTimeEnterReboot()
+{
+    if (ResetSystemCounter == TIME_REBOOT_CONTER)
+    {
+        HAL_NVIC_SystemReset();
+    }
+    
+}
 
 uint8_t GetTimerCycleOneSecound()
 {
    return u8TimerCycleOneSecond;
 }
+
+
 void ResetTimerCycleOneSecond()
 {
     u8TimerCycleOneSecond = 0;
@@ -50,7 +65,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     u8TimerCycleOneSecond++;
     if (GetTimerCycleOneSecound() >=100)
     {
-       ResetTimerCycleOneSecond();
+        ResetSystemCounter++;
+        ResetTimerCycleOneSecond();
     }
       
    }

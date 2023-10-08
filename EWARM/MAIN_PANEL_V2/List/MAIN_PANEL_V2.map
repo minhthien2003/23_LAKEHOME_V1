@@ -1,0 +1,543 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  08/Oct/2023  14:51:28
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Exe\MAIN_PANEL_V2.out
+#    Map file     =
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\List\MAIN_PANEL_V2.map
+#    Command line =
+#        -f
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Exe\MAIN_PANEL_V2.out.rsp
+#        (D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib\AppDataFlashOperation.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib\AppProc.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\main.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\EWARM\startup_stm32f030x8.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib\StdErrorCode.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_cortex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_dma.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_exti.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_flash.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_flash_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_gpio.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_i2c.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_i2c_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\stm32f0xx_hal_msp.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_pwr.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_pwr_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_rcc.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_rcc_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_tim.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_tim_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_uart.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver\stm32f0xx_hal_uart_ex.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\stm32f0xx_it.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\CMSIS\system_stm32f0xx.o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib\TimerControl.o
+#        --no_out_extension -o
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Exe\MAIN_PANEL_V2.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\List\MAIN_PANEL_V2.map
+#        --config
+#        D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM/stm32f030x8_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M0 --fpu=None)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'1fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xb4
+  .intvec            ro code   0x800'0000    0xb4  startup_stm32f030x8.o [1]
+                             - 0x800'00b4    0xb4
+
+"P1":                                      0x23cc
+  .text              ro code   0x800'00b4   0x768  stm32f0xx_hal_uart.o [5]
+  .text              ro code   0x800'081c   0x128  stm32f0xx_hal_msp.o [2]
+  .text              ro code   0x800'0944     0xc  stm32f0xx_hal.o [5]
+  .text              ro code   0x800'0950   0x52c  stm32f0xx_hal_rcc.o [5]
+  .text              ro code   0x800'0e7c    0x36  I32DivMod.o [7]
+  .text              ro code   0x800'0eb2     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'0eb4   0x1c8  stm32f0xx_hal_dma.o [5]
+  .text              ro code   0x800'107c   0x3d4  AppProc.o [3]
+  .text              ro code   0x800'1450     0x2  stm32f0xx_hal_uart.o [5]
+  .text              ro code   0x800'1452     0x2  stm32f0xx_hal_uart.o [5]
+  .text              ro code   0x800'1454     0x2  stm32f0xx_hal_uart.o [5]
+  .text              ro code   0x800'1456     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'1458    0xa8  stm32f0xx_hal_cortex.o [5]
+  .text              ro code   0x800'1500    0x14  memset.o [7]
+  .text              ro code   0x800'1514   0x1d4  stm32f0xx_hal_gpio.o [5]
+  .text              ro code   0x800'16e8   0x27c  main.o [2]
+  .text              ro code   0x800'1964    0x44  stm32f0xx_hal.o [5]
+  .text              ro code   0x800'19a8     0x2  IntDivZer.o [7]
+  .text              ro code   0x800'19aa     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'19ac    0x3a  AppDataFlashOperation.o [3]
+  .text              ro code   0x800'19e6     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'19e8    0x9c  TimerControl.o [3]
+  .text              ro code   0x800'1a84    0xa4  StdErrorCode.o [3]
+  .text              ro code   0x800'1b28    0x28  stm32f0xx_hal.o [5]
+  .text              ro code   0x800'1b50    0x10  ABImemset_small.o [7]
+  .text              ro code   0x800'1b60    0x34  ABImemcpy.o [7]
+  .text              ro code   0x800'1b94    0x20  stm32f0xx_hal.o [5]
+  .text              ro code   0x800'1bb4   0x30c  stm32f0xx_hal_tim.o [5]
+  .text              ro code   0x800'1ec0    0xfc  stm32f0xx_hal_rcc_ex.o [5]
+  .text              ro code   0x800'1fbc   0x164  stm32f0xx_hal_flash.o [5]
+  .text              ro code   0x800'2120    0xe4  stm32f0xx_hal_flash_ex.o [5]
+  .text              ro code   0x800'2204     0x2  stm32f0xx_hal_tim.o [5]
+  .text              ro code   0x800'2206     0x2  stm32f0xx_hal_tim.o [5]
+  .text              ro code   0x800'2208     0x2  stm32f0xx_hal_tim.o [5]
+  .text              ro code   0x800'220a     0x2  stm32f0xx_hal_tim_ex.o [5]
+  .text              ro code   0x800'220c     0x2  stm32f0xx_hal_tim.o [5]
+  .text              ro code   0x800'220e     0x2  stm32f0xx_hal_tim_ex.o [5]
+  .text              ro code   0x800'2210    0x1e  U64Shr.o [7]
+  .text              ro code   0x800'222e    0x80  lz77_init_single.o [7]
+  .text              ro code   0x800'22ae     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'22b0    0x3c  stm32f0xx_it.o [2]
+  .text              ro code   0x800'22ec    0x10  stm32f0xx_hal.o [5]
+  .text              ro code   0x800'22fc    0x3c  zero_init3.o [7]
+  .text              ro code   0x800'2338    0x28  data_init.o [7]
+  .iar.init_table    const     0x800'2360    0x20  - Linker created -
+  .text              ro code   0x800'2380    0x1e  cmain.o [7]
+  .text              ro code   0x800'239e     0x4  low_level_init.o [6]
+  .text              ro code   0x800'23a2     0x8  exit.o [6]
+  .text              ro code   0x800'23aa     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'23ac     0xa  cexit.o [7]
+  .text              ro code   0x800'23b6     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'23b8    0x14  exit.o [8]
+  .text              ro code   0x800'23cc    0x1c  cstartup_M.o [7]
+  .text              ro code   0x800'23e8    0x14  system_stm32f0xx.o [4]
+  .text              ro code   0x800'23fc    0x10  startup_stm32f030x8.o [1]
+  .rodata            const     0x800'240c     0x8  system_stm32f0xx.o [4]
+  .text              ro code   0x800'2414     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2416     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2418     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'241a     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'241c     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'241e     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2420     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2422     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2424     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2426     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2428     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'242a     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'242c     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'242e     0x2  startup_stm32f030x8.o [1]
+  .text              ro code   0x800'2430     0x2  startup_stm32f030x8.o [1]
+  .rodata            const     0x800'2432     0x0  zero_init3.o [7]
+  .rodata            const     0x800'2432     0x0  lz77_init_single.o [7]
+  Initializer bytes  const     0x800'2432    0x4e  <for P2-1>
+                             - 0x800'2480  0x23cc
+
+"P2", part 1 of 3:                           0xb0
+  P2-1                        0x2000'0000    0xb0  <Init block>
+    .data            inited   0x2000'0000    0x50  AppProc.o [3]
+    .data            inited   0x2000'0050    0x50  AppProc.o [3]
+    .data            inited   0x2000'00a0     0xc  stm32f0xx_hal.o [5]
+    .data            inited   0x2000'00ac     0x4  system_stm32f0xx.o [4]
+                            - 0x2000'00b0    0xb0
+
+"P2", part 2 of 3:                          0x1d0
+  .bss               zero     0x2000'00b0   0x118  main.o [2]
+  .bss               zero     0x2000'01c8    0x44  main.o [2]
+  .bss               zero     0x2000'020c    0x3c  AppProc.o [3]
+  .bss               zero     0x2000'0248    0x20  stm32f0xx_hal_flash.o [5]
+  .bss               zero     0x2000'0268    0x10  AppDataFlashOperation.o [3]
+  .bss               zero     0x2000'0278     0x4  TimerControl.o [3]
+  .bss               zero     0x2000'027c     0x3  StdErrorCode.o [3]
+  .bss               zero     0x2000'027f     0x1  TimerControl.o [3]
+                            - 0x2000'0280   0x1d0
+
+"P2", part 3 of 3:                          0x400
+  CSTACK                      0x2000'0280   0x400  <Block>
+    CSTACK           uninit   0x2000'0280   0x400  <Block tail>
+                            - 0x2000'0680   0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'2480   0x800'ffff  0xdb80
+  0x2000'0680  0x2000'1fff  0x1980
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1d0:
+          0x2000'00b0  0x1d0
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x4e (44% of destination):
+           0x800'2432   0x4e
+    1 destination range, total size 0xb0:
+          0x2000'0000   0xb0
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                    ro code  ro data  rw data
+    ------                    -------  -------  -------
+command line/config:
+    ---------------------------------------------------
+    Total:
+
+D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\EWARM: [1]
+    startup_stm32f030x8.o         240
+    ---------------------------------------------------
+    Total:                        240
+
+D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core: [2]
+    main.o                        636               348
+    stm32f0xx_hal_msp.o           296
+    stm32f0xx_it.o                 60
+    ---------------------------------------------------
+    Total:                        992               348
+
+D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib: [3]
+    AppDataFlashOperation.o        58                16
+    AppProc.o                     980       70      220
+    StdErrorCode.o                164                 3
+    TimerControl.o                156                 5
+    ---------------------------------------------------
+    Total:                      1'358       70      244
+
+D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\CMSIS: [4]
+    system_stm32f0xx.o             20       10        4
+    ---------------------------------------------------
+    Total:                         20       10        4
+
+D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver: [5]
+    stm32f0xx_hal.o               168        6       12
+    stm32f0xx_hal_cortex.o        168
+    stm32f0xx_hal_dma.o           456
+    stm32f0xx_hal_flash.o         356                32
+    stm32f0xx_hal_flash_ex.o      228
+    stm32f0xx_hal_gpio.o          468
+    stm32f0xx_hal_rcc.o         1'324
+    stm32f0xx_hal_rcc_ex.o        252
+    stm32f0xx_hal_tim.o           788
+    stm32f0xx_hal_tim_ex.o          4
+    stm32f0xx_hal_uart.o        1'902
+    ---------------------------------------------------
+    Total:                      6'114        6       44
+
+dl6M_tln.a: [6]
+    exit.o                          8
+    low_level_init.o                4
+    ---------------------------------------------------
+    Total:                         12
+
+rt6M_tl.a: [7]
+    ABImemcpy.o                    52
+    ABImemset_small.o              16
+    I32DivMod.o                    54
+    IntDivZer.o                     2
+    U64Shr.o                       30
+    cexit.o                        10
+    cmain.o                        30
+    cstartup_M.o                   28
+    data_init.o                    40
+    lz77_init_single.o            128
+    memset.o                       20
+    zero_init3.o                   60
+    ---------------------------------------------------
+    Total:                        470
+
+shb_l.a: [8]
+    exit.o                         20
+    ---------------------------------------------------
+    Total:                         20
+
+    Linker created                          32    1'024
+-------------------------------------------------------
+    Grand Total:                9'226      118    1'664
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'2360          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'2380          --   Gb  - Linker created -
+?main                    0x800'2381         Code  Gb  cmain.o [7]
+ADC1_IRQHandler          0x800'2419         Code  Wk  startup_stm32f030x8.o [1]
+AHBPrescTable            0x800'23ec   0x10  Data  Gb  system_stm32f0xx.o [4]
+APBPrescTable            0x800'240c    0x8  Data  Gb  system_stm32f0xx.o [4]
+AppCycleCheckBootPin     0x800'10d1   0xb0  Code  Gb  AppProc.o [3]
+AppCycleGetInputDataPin
+                         0x800'136d   0x76  Code  Gb  AppProc.o [3]
+AppCycleGetInputDataPin::u8ResendCounter
+                        0x2000'0224    0x1  Data  Lc  AppProc.o [3]
+AppCycleSetLedStatus     0x800'1a93   0x8a  Code  Gb  StdErrorCode.o [3]
+AppGetInfo               0x800'107d    0x4  Code  Gb  AppProc.o [3]
+AppLedCnt               0x2000'027d    0x1  Data  Gb  StdErrorCode.o [3]
+AppReadDataOption        0x800'1081   0x46  Code  Gb  AppProc.o [3]
+AppUartCycleUpdateIOValue
+                         0x800'12c7   0x32  Code  Gb  AppProc.o [3]
+BootPinAction           0x2000'0220    0x2  Data  Gb  AppProc.o [3]
+CSTACK$$Base            0x2000'0280          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0680          --   Gb  - Linker created -
+CheckTimeEnterReboot     0x800'19e9   0x16  Code  Gb  TimerControl.o [3]
+ClearUartTxRxBuffer      0x800'11c3    0xa  Code  Gb  AppProc.o [3]
+DMA1_Channel1_IRQHandler
+                         0x800'2415         Code  Wk  startup_stm32f030x8.o [1]
+DMA1_Channel2_3_IRQHandler
+                         0x800'22c1    0xa  Code  Gb  stm32f0xx_it.o [2]
+DMA1_Channel4_5_IRQHandler
+                         0x800'2417         Code  Wk  startup_stm32f030x8.o [1]
+DMA_CalcBaseAndBitshift
+                         0x800'1057   0x1a  Code  Lc  stm32f0xx_hal_dma.o [5]
+DMA_SetConfig            0x800'1035   0x22  Code  Lc  stm32f0xx_hal_dma.o [5]
+DataRawRx               0x2000'0228   0x10  Data  Gb  AppProc.o [3]
+EXTI0_1_IRQHandler       0x800'22af         Code  Wk  startup_stm32f030x8.o [1]
+EXTI2_3_IRQHandler       0x800'23ab         Code  Wk  startup_stm32f030x8.o [1]
+EXTI4_15_IRQHandler      0x800'23b7         Code  Wk  startup_stm32f030x8.o [1]
+ErrorCode               0x2000'027c    0x1  Data  Gb  StdErrorCode.o [3]
+Error_Handler            0x800'1961    0x4  Code  Gb  main.o [2]
+FLASH_IRQHandler         0x800'19ab         Code  Wk  startup_stm32f030x8.o [1]
+FLASH_MassErase          0x800'21bb   0x1a  Code  Lc  stm32f0xx_hal_flash_ex.o [5]
+FLASH_PageErase          0x800'21e1   0x1c  Code  Gb  stm32f0xx_hal_flash_ex.o [5]
+FLASH_Program_HalfWord   0x800'206b   0x16  Code  Lc  stm32f0xx_hal_flash.o [5]
+FLASH_SetErrorCode       0x800'20d5   0x34  Code  Lc  stm32f0xx_hal_flash.o [5]
+FLASH_WaitForLastOperation
+                         0x800'2081   0x4e  Code  Gb  stm32f0xx_hal_flash.o [5]
+FlError                 0x2000'0274    0x4  Data  Gb  AppDataFlashOperation.o [3]
+GetBootPinAction         0x800'10cd    0x4  Code  Gb  AppProc.o [3]
+GetIOStatusFunc          0x800'1293   0x1c  Code  Gb  AppProc.o [3]
+GetLockTimer             0x800'1a05    0x6  Code  Gb  TimerControl.o [3]
+GetTimerCycleOneSecound
+                         0x800'19ff    0x6  Code  Gb  TimerControl.o [3]
+Get_0xFE_DataReceivedFromPanel
+                         0x800'10c7    0x6  Code  Gb  AppProc.o [3]
+HAL_DMA_IRQHandler       0x800'0f75   0xc0  Code  Gb  stm32f0xx_hal_dma.o [5]
+HAL_DMA_Init             0x800'0eb5   0x4c  Code  Gb  stm32f0xx_hal_dma.o [5]
+HAL_DMA_Start_IT         0x800'0f05   0x70  Code  Gb  stm32f0xx_hal_dma.o [5]
+HAL_Delay                0x800'1b29   0x28  Code  Wk  stm32f0xx_hal.o [5]
+HAL_FLASHEx_Erase        0x800'2121   0x9a  Code  Gb  stm32f0xx_hal_flash_ex.o [5]
+HAL_FLASH_Lock           0x800'205d    0xe  Code  Gb  stm32f0xx_hal_flash.o [5]
+HAL_FLASH_Program        0x800'1fbd   0x82  Code  Gb  stm32f0xx_hal_flash.o [5]
+HAL_FLASH_Unlock         0x800'203f   0x1e  Code  Gb  stm32f0xx_hal_flash.o [5]
+HAL_GPIO_Init            0x800'1515  0x194  Code  Gb  stm32f0xx_hal_gpio.o [5]
+HAL_GPIO_ReadPin         0x800'16a9    0xc  Code  Gb  stm32f0xx_hal_gpio.o [5]
+HAL_GPIO_TogglePin       0x800'16c1   0x10  Code  Gb  stm32f0xx_hal_gpio.o [5]
+HAL_GPIO_WritePin        0x800'16b5    0xc  Code  Gb  stm32f0xx_hal_gpio.o [5]
+HAL_GetTick              0x800'0945    0xc  Code  Wk  stm32f0xx_hal.o [5]
+HAL_IncTick              0x800'22ed   0x10  Code  Wk  stm32f0xx_hal.o [5]
+HAL_Init                 0x800'1b95   0x1a  Code  Gb  stm32f0xx_hal.o [5]
+HAL_InitTick             0x800'1965   0x44  Code  Wk  stm32f0xx_hal.o [5]
+HAL_MspInit              0x800'081d   0x2a  Code  Gb  stm32f0xx_hal_msp.o [2]
+HAL_NVIC_EnableIRQ       0x800'149b   0x12  Code  Gb  stm32f0xx_hal_cortex.o [5]
+HAL_NVIC_SetPriority     0x800'1493    0x8  Code  Gb  stm32f0xx_hal_cortex.o [5]
+HAL_NVIC_SystemReset     0x800'14ad   0x12  Code  Gb  stm32f0xx_hal_cortex.o [5]
+HAL_RCCEx_PeriphCLKConfig
+                         0x800'1ec1   0xe2  Code  Gb  stm32f0xx_hal_rcc_ex.o [5]
+HAL_RCC_ClockConfig      0x800'0cdd   0xfc  Code  Gb  stm32f0xx_hal_rcc.o [5]
+HAL_RCC_GetPCLK1Freq     0x800'0e1b   0x14  Code  Gb  stm32f0xx_hal_rcc.o [5]
+HAL_RCC_GetSysClockFreq
+                         0x800'0de1   0x3a  Code  Gb  stm32f0xx_hal_rcc.o [5]
+HAL_RCC_GetSysClockFreq::aPLLMULFactorTable
+                         0x800'0e5c   0x10  Data  Lc  stm32f0xx_hal_rcc.o [5]
+HAL_RCC_GetSysClockFreq::aPredivFactorTable
+                         0x800'0e6c   0x10  Data  Lc  stm32f0xx_hal_rcc.o [5]
+HAL_RCC_OscConfig        0x800'0951  0x37e  Code  Gb  stm32f0xx_hal_rcc.o [5]
+HAL_SYSTICK_Config       0x800'14bf   0x28  Code  Gb  stm32f0xx_hal_cortex.o [5]
+HAL_TIMEx_BreakCallback
+                         0x800'220b    0x2  Code  Wk  stm32f0xx_hal_tim_ex.o [5]
+HAL_TIMEx_CommutCallback
+                         0x800'220f    0x2  Code  Wk  stm32f0xx_hal_tim_ex.o [5]
+HAL_TIM_Base_Init        0x800'1bb5   0x1e  Code  Gb  stm32f0xx_hal_tim.o [5]
+HAL_TIM_Base_MspInit     0x800'0847   0x52  Code  Gb  stm32f0xx_hal_msp.o [2]
+HAL_TIM_Base_Start       0x800'1bd3   0x40  Code  Gb  stm32f0xx_hal_tim.o [5]
+HAL_TIM_Base_Start_IT    0x800'1c13   0x48  Code  Gb  stm32f0xx_hal_tim.o [5]
+HAL_TIM_Base_Stop_IT     0x800'1c5b   0x34  Code  Gb  stm32f0xx_hal_tim.o [5]
+HAL_TIM_IC_CaptureCallback
+                         0x800'2205    0x2  Code  Wk  stm32f0xx_hal_tim.o [5]
+HAL_TIM_IRQHandler       0x800'1ce1  0x152  Code  Gb  stm32f0xx_hal_tim.o [5]
+HAL_TIM_OC_DelayElapsedCallback
+                         0x800'2207    0x2  Code  Wk  stm32f0xx_hal_tim.o [5]
+HAL_TIM_PWM_PulseFinishedCallback
+                         0x800'2209    0x2  Code  Wk  stm32f0xx_hal_tim.o [5]
+HAL_TIM_PeriodElapsedCallback
+                         0x800'1a0b   0x32  Code  Gb  TimerControl.o [3]
+HAL_TIM_TriggerCallback
+                         0x800'220d    0x2  Code  Wk  stm32f0xx_hal_tim.o [5]
+HAL_UARTEx_RxEventCallback
+                         0x800'1451    0x2  Code  Wk  stm32f0xx_hal_uart.o [5]
+HAL_UART_ErrorCallback   0x800'1455    0x2  Code  Wk  stm32f0xx_hal_uart.o [5]
+HAL_UART_Init            0x800'00b5   0x56  Code  Gb  stm32f0xx_hal_uart.o [5]
+HAL_UART_MspInit         0x800'0899   0x8c  Code  Gb  stm32f0xx_hal_msp.o [2]
+HAL_UART_Receive_DMA     0x800'01fb   0x5a  Code  Gb  stm32f0xx_hal_uart.o [5]
+HAL_UART_RxCpltCallback
+                         0x800'13e3   0x2e  Code  Gb  AppProc.o [3]
+HAL_UART_RxHalfCpltCallback
+                         0x800'1453    0x2  Code  Wk  stm32f0xx_hal_uart.o [5]
+HAL_UART_Transmit        0x800'0121   0xda  Code  Gb  stm32f0xx_hal_uart.o [5]
+HardFault_Handler        0x800'22b3    0x2  Code  Gb  stm32f0xx_it.o [2]
+I2C1_IRQHandler          0x800'2427         Code  Wk  startup_stm32f030x8.o [1]
+I2C2_IRQHandler          0x800'2429         Code  Wk  startup_stm32f030x8.o [1]
+INPUT_TABLE             0x2000'0000   0x50  Data  Gb  AppProc.o [3]
+NMI_Handler              0x800'22b1    0x2  Code  Gb  stm32f0xx_it.o [2]
+OUTPUT_TABLE            0x2000'0050   0x50  Data  Gb  AppProc.o [3]
+PendSV_Handler           0x800'22b7    0x2  Code  Gb  stm32f0xx_it.o [2]
+RCC_IRQHandler           0x800'19e7         Code  Wk  startup_stm32f030x8.o [1]
+RTC_IRQHandler           0x800'1457         Code  Wk  startup_stm32f030x8.o [1]
+ReInitUartConnect        0x800'1411   0x28  Code  Gb  AppProc.o [3]
+ReadBackupData           0x800'19e1    0x6  Code  Gb  AppDataFlashOperation.o [3]
+ReadIOPin                0x800'1305   0x58  Code  Gb  AppProc.o [3]
+Region$$Table$$Base      0x800'2360          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'2380          --   Gb  - Linker created -
+ResetCommError           0x800'1a8b    0x8  Code  Gb  StdErrorCode.o [3]
+ResetSystemCounter      0x2000'027a    0x2  Data  Gb  TimerControl.o [3]
+Reset_Handler            0x800'23fd         Code  Wk  startup_stm32f030x8.o [1]
+RxPacket                0x2000'0210   0x10  Data  Gb  AppProc.o [3]
+SPI1_IRQHandler          0x800'242b         Code  Wk  startup_stm32f030x8.o [1]
+SPI2_IRQHandler          0x800'242d         Code  Wk  startup_stm32f030x8.o [1]
+SVC_Handler              0x800'22b5    0x2  Code  Gb  stm32f0xx_it.o [2]
+SetErrorCode             0x800'1a85    0x6  Code  Gb  StdErrorCode.o [3]
+SetIOStatusFunc          0x800'12af   0x18  Code  Gb  AppProc.o [3]
+SysTick_Handler          0x800'22b9    0x8  Code  Gb  stm32f0xx_it.o [2]
+SystemClock_Config       0x800'18ed   0x74  Code  Gb  main.o [2]
+SystemCoreClock         0x2000'00ac    0x4  Data  Gb  system_stm32f0xx.o [4]
+SystemInit               0x800'23e9    0x2  Code  Gb  system_stm32f0xx.o [4]
+TIM14_IRQHandler         0x800'22d5    0xa  Code  Gb  stm32f0xx_it.o [2]
+TIM15_IRQHandler         0x800'2421         Code  Wk  startup_stm32f030x8.o [1]
+TIM16_IRQHandler         0x800'2423         Code  Wk  startup_stm32f030x8.o [1]
+TIM17_IRQHandler         0x800'2425         Code  Wk  startup_stm32f030x8.o [1]
+TIM1_BRK_UP_TRG_COM_IRQHandler
+                         0x800'241b         Code  Wk  startup_stm32f030x8.o [1]
+TIM1_CC_IRQHandler       0x800'241d         Code  Wk  startup_stm32f030x8.o [1]
+TIM3_IRQHandler          0x800'241f         Code  Wk  startup_stm32f030x8.o [1]
+TIM6_IRQHandler          0x800'22cb    0xa  Code  Gb  stm32f0xx_it.o [2]
+TIM_Base_SetConfig       0x800'1e33   0x70  Code  Gb  stm32f0xx_hal_tim.o [5]
+TimerAction              0x800'1a69   0x1c  Code  Gb  TimerControl.o [3]
+TimerBootPinAction       0x800'1a3d   0x1a  Code  Gb  TimerControl.o [3]
+TxPacket                0x2000'0238   0x10  Data  Gb  AppProc.o [3]
+UART_AdvFeatureConfig    0x800'035d   0xc8  Code  Gb  stm32f0xx_hal_uart.o [5]
+UART_CheckIdleState      0x800'0429   0xae  Code  Gb  stm32f0xx_hal_uart.o [5]
+UART_DMAError            0x800'0799   0x50  Code  Lc  stm32f0xx_hal_uart.o [5]
+UART_DMAReceiveCplt      0x800'06d9   0x90  Code  Lc  stm32f0xx_hal_uart.o [5]
+UART_DMARxHalfCplt       0x800'0775   0x24  Code  Lc  stm32f0xx_hal_uart.o [5]
+UART_EndRxTransfer       0x800'0675   0x5e  Code  Lc  stm32f0xx_hal_uart.o [5]
+UART_EndTxTransfer       0x800'0655   0x20  Code  Lc  stm32f0xx_hal_uart.o [5]
+UART_SetConfig           0x800'0255  0x108  Code  Gb  stm32f0xx_hal_uart.o [5]
+UART_Start_Receive_DMA   0x800'05a5   0x94  Code  Gb  stm32f0xx_hal_uart.o [5]
+UART_WaitOnFlagUntilTimeout
+                         0x800'04f9   0x98  Code  Gb  stm32f0xx_hal_uart.o [5]
+USART1_IRQHandler        0x800'242f         Code  Wk  startup_stm32f030x8.o [1]
+USART2_IRQHandler        0x800'2431         Code  Wk  startup_stm32f030x8.o [1]
+Uart485SendNotiACKPacket
+                         0x800'11cd   0x7a  Code  Gb  AppProc.o [3]
+UartMakeSendData         0x800'1181   0x42  Code  Gb  AppProc.o [3]
+UartRs485ProcessData     0x800'1247   0x4c  Code  Gb  AppProc.o [3]
+WWDG_IRQHandler          0x800'0eb3         Code  Wk  startup_stm32f030x8.o [1]
+WriteBackupData          0x800'19ad   0x30  Code  Gb  AppDataFlashOperation.o [3]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'1fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__NVIC_SetPriority       0x800'1459   0x3a  Code  Lc  stm32f0xx_hal_cortex.o [5]
+__aeabi_idiv0            0x800'19a9         Code  Gb  IntDivZer.o [7]
+__aeabi_llsr             0x800'2211         Code  Gb  U64Shr.o [7]
+__aeabi_memcpy4          0x800'1b61         Code  Gb  ABImemcpy.o [7]
+__aeabi_memcpy8          0x800'1b61         Code  Gb  ABImemcpy.o [7]
+__cmain                  0x800'2381         Code  Gb  cmain.o [7]
+__exit                   0x800'23b9   0x14  Code  Gb  exit.o [8]
+__iar_data_init3         0x800'2339   0x28  Code  Gb  data_init.o [7]
+__iar_lz77_init_single3
+                         0x800'222f   0x80  Code  Gb  lz77_init_single.o [7]
+__iar_program_start      0x800'23cd         Code  Gb  cstartup_M.o [7]
+__iar_small_Memset4_word
+                         0x800'1b55         Code  Gb  ABImemset_small.o [7]
+__iar_small_Memset_word
+                         0x800'1b55         Code  Gb  ABImemset_small.o [7]
+__iar_small_memclr       0x800'1b51         Code  Gb  ABImemset_small.o [7]
+__iar_small_memclr4      0x800'1b51         Code  Gb  ABImemset_small.o [7]
+__iar_small_memclr8      0x800'1b51         Code  Gb  ABImemset_small.o [7]
+__iar_small_memset       0x800'1b55         Code  Gb  ABImemset_small.o [7]
+__iar_small_memset4      0x800'1b55         Code  Gb  ABImemset_small.o [7]
+__iar_small_memset8      0x800'1b55         Code  Gb  ABImemset_small.o [7]
+__iar_small_uidiv        0x800'0e7d         Code  Gb  I32DivMod.o [7]
+__iar_small_uidivmod     0x800'0e7d         Code  Gb  I32DivMod.o [7]
+__iar_zero_init3         0x800'22fd   0x3c  Code  Gb  zero_init3.o [7]
+__low_level_init         0x800'239f    0x4  Code  Gb  low_level_init.o [6]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f030x8.o [1]
+_call_main               0x800'238d         Code  Gb  cmain.o [7]
+_exit                    0x800'23ad         Code  Gb  cexit.o [7]
+exit                     0x800'23a3    0x8  Code  Gb  exit.o [6]
+flTypeInit              0x2000'0268    0xc  Data  Gb  AppDataFlashOperation.o [3]
+gModelInfo              0x2000'020c    0x4  Data  Gb  AppProc.o [3]
+hdma_usart1_rx          0x2000'01c8   0x44  Data  Gb  main.o [2]
+htim14                  0x2000'0180   0x48  Data  Gb  main.o [2]
+htim6                   0x2000'0138   0x48  Data  Gb  main.o [2]
+huart1                  0x2000'00b0   0x88  Data  Gb  main.o [2]
+main                     0x800'16e9  0x1d8  Code  Gb  main.o [2]
+memset                   0x800'1501   0x14  Code  Gb  memset.o [7]
+pFlash                  0x2000'0248   0x20  Data  Gb  stm32f0xx_hal_flash.o [5]
+u8CommCnt               0x2000'027e    0x1  Data  Gb  StdErrorCode.o [3]
+u8IO_Updated            0x2000'0223    0x1  Data  Gb  AppProc.o [3]
+u8LockTimer             0x2000'027f    0x1  Data  Gb  TimerControl.o [3]
+u8TimerCycleOneSecond   0x2000'0278    0x1  Data  Gb  TimerControl.o [3]
+u8WaitACKFlag           0x2000'0222    0x1  Data  Gb  AppProc.o [3]
+uwTick                  0x2000'00a4    0x4  Data  Gb  stm32f0xx_hal.o [5]
+uwTickFreq              0x2000'00a0    0x1  Data  Gb  stm32f0xx_hal.o [5]
+uwTickPrio              0x2000'00a8    0x4  Data  Gb  stm32f0xx_hal.o [5]
+
+
+[1] = D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\EWARM
+[2] = D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core
+[3] = D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Application\User\Core\AppDriverLib
+[4] = D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\CMSIS
+[5] = D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\MAIN_PANEL_V2\Obj\Drivers\STM32F0xx_HAL_Driver
+[6] = dl6M_tln.a
+[7] = rt6M_tl.a
+[8] = shb_l.a
+
+  9'226 bytes of readonly  code memory
+    118 bytes of readonly  data memory
+  1'664 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

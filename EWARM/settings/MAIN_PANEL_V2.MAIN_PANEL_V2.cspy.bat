@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" "--debug_file=%~1" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\23_LAKEHOME_V1\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.general.xcl" "--debug_file=%~1" --backend -f "D:\DIEN_PROJECT\HOBOI_PANEL\SOFTWARE\MAIN_PANEL_COMBO_V2\EWARM\settings\MAIN_PANEL_V2.MAIN_PANEL_V2.driver.xcl" 
 
 @echo off 
 :end

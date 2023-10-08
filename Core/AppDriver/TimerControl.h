@@ -14,6 +14,8 @@
 #define TIMER_POLL  (0)
 #define TIMER_INTERRUPT (1)
 
+
+void CheckTimeEnterReboot();
 uint8_t GetTimerCycleOneSecound();
 void ResetTimerCycleOneSecond();
 void SetLockTimer(uint8_t u8Data);

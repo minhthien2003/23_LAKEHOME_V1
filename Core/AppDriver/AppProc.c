@@ -57,8 +57,7 @@ extern TIM_HandleTypeDef htim6;
 extern TIM_HandleTypeDef htim14;
 
 
-Uart485DataCommPackets RxPacket;
-Uart485DataCommPackets TxPacket;
+Uart485DataCommPackets RxPacket, TxPacket, DataRawRx;
 // static Uart485DataCommPackets ACKTxPacket;
 
 
@@ -124,7 +123,7 @@ void AppReadDataOption()
    }
 
    *pmodel = u32ReadDataFromFl;
-   if (pmodel->TYPE == SLAVE)
+   if ((pmodel->TYPE == SLAVE) || (pmodel->TYPE == MASTER))
    {
       ReInitUartConnect();
    }
@@ -183,10 +182,11 @@ void AppCycleCheckBootPin()
          else
          {
              BootPinAction.eMode = SET_SLAVE;
-         }
-         
-         
-
+         }   
+      }
+      if (BootPinAction.u8CheckCount <= 1)
+      {
+         BootPinAction.eMode = SYSTEM_REBOOT;
       }
       
    }
@@ -215,6 +215,10 @@ void AppCycleCheckBootPin()
                WriteBackupData(ADD_PAGE_63_SECTOR_15_START, (uint32_t *)pModel);
                
             break;
+         case  SYSTEM_REBOOT:
+               HAL_NVIC_SystemReset();
+               break;
+                
          default:
             break;
          }
@@ -242,7 +246,8 @@ void UartMakeSendData(const void* pu8Data, uint8_t u8NumData)
    if (Get_0xFE_DataReceivedFromPanel() == DISABLE_READ_DATA_UART)
    {
       HAL_GPIO_WritePin(EN_485_GPIO_Port, EN_485_Pin, SET_ON);
-      HAL_UART_Transmit(&huart1, (uint8_t *)pu8Data, u8NumData,HAL_MAX_DELAY);
+      HAL_Delay(3);
+      HAL_UART_Transmit(&huart1, (uint8_t *)pu8Data, (uint16_t)u8NumData, HAL_MAX_DELAY);
       HAL_GPIO_WritePin(EN_485_GPIO_Port, EN_485_Pin, SET_OFF);
 
    } 
@@ -311,7 +316,7 @@ void Uart485SendNotiACKPacket(uint8_t address, Uart485DataCommPackets* pData, ui
    }
 
 
-   UartMakeSendData(pData, u8NumData);
+   UartMakeSendData((uint8_t *)pData, u8NumData);
    SetErrorCode(ENone);
    
    HAL_GPIO_TogglePin(LED_2_GPIO_Port,LED_2_Pin);
@@ -355,7 +360,7 @@ _eIOData UartRs485ProcessData()
                      
                      OutPutChanged = IO_CHANGED;
                      /*
-                     if (pModel->TYPE == SLAVE)
+                     if (pModel->TYPE == SLAVE) 
                      {
                         Uart485SendNotiACKPacket(MASTER_ADDRESS,pTxPacket, ACK_WRITE, MaxFrameUartData);
                         ClearUartTxRxBuffer(pRxPacket);
@@ -434,55 +439,19 @@ void SetIOStatusFunc(_eIOData eType, uint8_t u8Pin, uint8_t u8Value)
 void AppUartCycleUpdateIOValue()
 {
 
-#if 0
-   if (u8WaitACKFlag)
-   {
-
-      if ((GetTimerCycleOneSecound() % 2) == 0)
-      {
-         u8WaitCnt++;
-      }
-      if (u8WaitCnt>=3)
-      {
-        SetErrorCode(ERROR_RS485_COMMUNICATE);
-        u8WaitCnt = 0;
-        u8WaitACKFlag = 0;
-      }
-        
-   }
-#endif
-
    if (Get_0xFE_DataReceivedFromPanel() == ALLOW_READ_DATA_UART)
    {
 
       Set_0xFE_DataReceivedFromPanel(DISABLE_READ_DATA_UART);
-      _eIOData u8CheckIO = UartRs485ProcessData();
-      if (u8CheckIO == IO_CHANGED)
+      if (UartRs485ProcessData() == IO_CHANGED)
       {
          for (uint8_t Idx = 0; Idx < NUM_OUTPUT_PIN; Idx++)
          {
            HAL_GPIO_WritePin(OUTPUT_TABLE[Idx].IO_PORT, OUTPUT_TABLE[Idx].IO_NAME,\
 		   						(GPIO_PinState)OUTPUT_TABLE[Idx].IO_DATA_VALUE);
          }
-         
       }
-      
-      ReInitUartConnect();
 
-   }
-   else
-   {
-
-      sModelInfo* pModel = AppGetInfo();
-      if (pModel->TYPE == MASTER)
-      {
-         if ((GetTimerCycleOneSecound()%6) == 0)
-         {
-            Uart485DataCommPackets*   pTxPacket = &TxPacket;
-            Uart485SendNotiACKPacket(SLAVE_ADDRESS,pTxPacket, WRITE_DATA, MaxFrameUartData);
-         }
-      }
-      
    }
 
    
@@ -502,7 +471,7 @@ uint8_t ReadIOPin()
    {
 
       u8Ret = HAL_GPIO_ReadPin(INPUT_TABLE[pin_index].IO_PORT, INPUT_TABLE[pin_index].IO_NAME);
-      HAL_Delay(10);
+      HAL_Delay(1);
       if (u8Ret == 1)
          {
             IOTempStatus[pin_index] = SET_ON; 
@@ -526,15 +495,15 @@ uint8_t ReadIOPin()
 
 
 
-
 void AppCycleGetInputDataPin()
 {
+   static uint8_t u8ResendCounter = 0;
+   Uart485DataCommPackets* pTxPacket = &TxPacket;
+   sModelInfo* pModel = AppGetInfo();
+
+
    if (ReadIOPin() == IO_CHANGED)
    {
-      Uart485DataCommPackets* pTxPacket = &TxPacket;
-
-      sModelInfo* pModel = AppGetInfo();
-
       /* Update data to Output table */
       for (uint8_t Idx = 0; Idx < NUM_INPUT_PIN; Idx++)
       {
@@ -545,11 +514,29 @@ void AppCycleGetInputDataPin()
 
       if (pModel->TYPE == MASTER)
       {
+
          Uart485SendNotiACKPacket(SLAVE_ADDRESS, pTxPacket, WRITE_DATA, MaxFrameUartData);
+         
       }
-	
-      
+         
    }
+
+   
+   if (pModel->TYPE == MASTER)
+   {
+      if (GetTimerCycleOneSecound() - u8ResendCounter == 10)
+      {
+         u8ResendCounter = GetTimerCycleOneSecound();
+         Uart485SendNotiACKPacket(SLAVE_ADDRESS,pTxPacket, WRITE_DATA, MaxFrameUartData);
+      }
+      else if(GetTimerCycleOneSecound() == 0)
+      {
+         u8ResendCounter = 0;
+      }
+
+   }
+  
+   /**/
    
 }
 
@@ -558,21 +545,29 @@ void AppCycleGetInputDataPin()
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
    if (huart->Instance == USART1)
    {
+      for (uint8_t i = 0; i < MaxFrameUartData; i++)
+      {
+         RxPacket.InternalComData[i] = DataRawRx.InternalComData[i];
+      }
+      
       Set_0xFE_DataReceivedFromPanel(ALLOW_READ_DATA_UART);
       HAL_GPIO_TogglePin(LED_2_GPIO_Port,LED_2_Pin);
       SetErrorCode(ENone);
+
+
    }
      
 }
 
 
-
 void ReInitUartConnect()
 {
-   HAL_UART_AbortReceive_IT(&huart1);
-   ClearUartTxRxBuffer(&RxPacket);
+
+   ClearUartTxRxBuffer(&DataRawRx);
    HAL_GPIO_WritePin(EN_485_GPIO_Port, EN_485_Pin, SET_OFF);
-   HAL_UART_Receive_IT(&huart1, (uint8_t *)&RxPacket, MaxFrameUartData);
+   HAL_UART_Receive_DMA(&huart1, (uint8_t*)&DataRawRx, 14);
+   //HAL_UART_Receive_IT(&huart1, (uint8_t *)&DataRawRx, MaxFrameUartData);
+
 }
 
 
